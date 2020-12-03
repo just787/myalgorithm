@@ -27,7 +27,7 @@ public class 宝石与石头771 {
 
     S 和 J 最多含有50个字母。
     J 中的字符不重复。
-    */
+*/
 
     public static void main(String[] args) {
         System.out.println(numJewelsInStones1("aAb", "aAAbbbb"));
