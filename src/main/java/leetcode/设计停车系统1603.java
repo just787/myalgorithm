@@ -45,7 +45,6 @@ public class 设计停车系统1603 {
         parkingSystem.addCar(1); // 返回 false ，因为没有空的大车位，唯一一个大车位已经被占据了
     }
 
-
     static class ParkingSystem {
         int carContainer[];
 
