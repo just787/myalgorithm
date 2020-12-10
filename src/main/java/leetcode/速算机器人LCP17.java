@@ -40,8 +40,7 @@ public class 速算机器人LCP17 {
         int x = 1;
         int y = 0;
         for (int i = 0; i < s.length(); i++) {
-            String c = String.valueOf(s.charAt(i));
-            if (c.equals("A")) {
+            if (s.charAt(i) == 'A') {
                 x = 2 * x + y;
             } else {
                 y = 2 * y + x;
@@ -52,6 +51,6 @@ public class 速算机器人LCP17 {
 
     public static int calculate1(String s) {
         // 当出现A时，x+y=(2 * x + y) + y = 2x + 2y; 当出现B时，x+y=(2 * y + x) + x =  2x + 2y; 所以每出现A或B都会使x+y翻一倍
-        return  1 << s.length();
+        return 1 << s.length();
     }
 }
