@@ -1,7 +1,11 @@
 package leetcode;
 
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.DoubleSummaryStatistics;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @description: TODO
@@ -56,6 +60,24 @@ public class 平衡二叉树_剑指Offer55II {
         treeNode2.left = treeNode3;
         treeNode2.right = treeNode4;
 
+
+        Calendar calendar = Calendar.getInstance();
+        String year = String.valueOf(calendar.get(Calendar.YEAR));
+        String week = String.valueOf(calendar.get(Calendar.WEEK_OF_YEAR));
+        System.out.println(year + "" + week + "");  // 20201
+
+
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
+        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+
+        System.out.println("筛选列表: " + filtered);
+        String mergedString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(", "));
+        System.out.println("合并字符串: " + mergedString);
+
+
+        List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
+        DoubleSummaryStatistics stats = numbers.stream().mapToDouble(x -> x*x).summaryStatistics();
     }
 
     static class TreeNode {
@@ -72,7 +94,6 @@ public class 平衡二叉树_剑指Offer55II {
         List<TreeNode> queue = new LinkedList<TreeNode>() {{
             add(root);
         }}, tmp;
-
 
 
         int depth = 0;
