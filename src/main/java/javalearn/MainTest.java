@@ -1,5 +1,8 @@
 package javalearn;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @description: TODO
  * @author: leo
@@ -8,6 +11,13 @@ package javalearn;
  */
 public class MainTest {
     public static void main(String[] args) {
+        Set<String> stringSet = new HashSet<>();
+        stringSet.add("a");
+        stringSet.add("b");
+
+        stringSet.forEach(s -> s = "c");
+
+        stringSet.forEach(System.out::println);
 
     }
 }
